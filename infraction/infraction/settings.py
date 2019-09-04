@@ -31,14 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.ExamConfig',
+    'exam.apps.ExamConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'loadjson',
 ]
+LOAD_JSON = {
+    'JSON': [os.path.join(BASE_DIR, 'dumpdata')],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

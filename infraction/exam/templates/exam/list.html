@@ -1,0 +1,12 @@
+
+{% block content %}
+<h1>infractions</h1>
+{% for d in data %}
+<ul>
+    <p>Street name: {{ d.street }}</p>
+    <p>Speed limit: {{ d.speed_limit }}</p>
+    <p>Infractions speed: {{ d.infractions_speed }}</p>
+    <br/>
+</ul>
+{% endfor %}
+{% endblock %}
