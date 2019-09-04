@@ -1,6 +1,6 @@
 package ap.web.exam.Controller;
 
-import ap.web.exam.DTO.EightballDTO;
+import ap.web.exam.DTO.EigthballDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 class EightballController {
 
     @Autowired
-    private EightballDTO ballDTO;
+    private EigthballDTO ballDTO;
 
     @GetMapping(value="/eightball/Question")
     public String getQuestionForm(Model model) {
@@ -28,8 +28,8 @@ class EightballController {
         return "Question";
     }
 
-    @PostMapping("/quote")
-    public String addQuote(@RequestParam("question") String question
+    @PostMapping("/question")
+    public String addQuestion(@RequestParam("question") String question
                            ) {
 
 
@@ -46,7 +46,7 @@ class EightballController {
     }
 
     @GetMapping(value="/eightball/Answer/{questionId}")
-    public String answerSubmit(@ModelAttribute EightballDTO ballDTO, @PathVariable("questionId") int questionid, Model model) {
+    public String answerSubmit(@ModelAttribute EigthballDTO ballDTO, @PathVariable("questionId") int questionid, Model model) {
         ArrayList<String> Answers = new ArrayList<String>();
             Answers.add("It is certain.");
             Answers.add("Without a doubt");

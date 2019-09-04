@@ -3,8 +3,7 @@ package ap.web.exam.DTO;
 import org.springframework.stereotype.Component;
 
 @Component
-public
-class EightballDTO {
+public class EigthballDTO {
     private String question;
     private String answer;
 
@@ -16,7 +15,7 @@ class EightballDTO {
     }
     public String getAnswer() {
         if (answer == null){
-            setAnswer("This is a default answer");
+            setAnswer("Er is geen antwoord");
         }
         return answer;
     }

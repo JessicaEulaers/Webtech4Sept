@@ -7,8 +7,8 @@
 <body>
 <h1>Answer</h1>
 <img src="backorb.jpeg" width="160" height="160" ></img>
-<p th:text="'Question is : ' + ${ballDTO.question}" />
-<p th:text="'Answer : ' + ${ballDTO.answer}" />
+<p th:text="'Question is : ' + ${Questions}" />
+<p th:text="'Answer : ' + ${Answer}" />
 <a href="/eightball">Ask another question</a>
 </body>
 </html>
