@@ -7,7 +7,7 @@
 <body>
 <h1>Eightball Question Form</h1>
 <img src="orb.jpeg" ></img>
-<form action="#" th:action="@{/eightball}" th:object="${ballDTO}" method="post">
+<form th:action="@{/eightball}" th:object="${ballDTO}" method="post">
     <p>Ask your Question: <input type="text" th:field="*{question}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
